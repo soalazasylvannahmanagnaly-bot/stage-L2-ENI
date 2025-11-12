@@ -1,0 +1,59 @@
+.mission-container {
+  text-align: center;
+  padding: 20px;
+ 
+  color: white;
+}
+
+.btn-add {
+  background-color: #00c851;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn-edit,
+.btn-delete {
+  margin: 3px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-edit {
+  background-color: #ffbb33;
+  color: white;
+}
+.btn-delete {
+  background-color: #ff4444;
+  color: white;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 8px;
+  width: 500px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  text-align: left;
+}

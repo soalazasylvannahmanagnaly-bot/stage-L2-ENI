@@ -1,0 +1,103 @@
+
+/* --- Conteneur principal --- */
+.chauffeur-container {
+
+   /* barre blanche comme vehicule */
+
+  border-radius: 15px;
+ 
+  text-align: center;
+}
+
+.chauffeur-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* --- Formulaire --- */
+.chauffeur-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+/* --- Bouton --- */
+.btn-submit {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* --- Tableau --- */
+.chauffeur-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  background: #ffffff; /* tableau avec fond blanc aussi */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chauffeur-table th,
+.chauffeur-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.chauffeur-table th {
+  background-color: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+.chauffeur-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .chauffeur-container {
+    margin: 80px 1rem;
+    padding: 1.5rem;
+  }
+}

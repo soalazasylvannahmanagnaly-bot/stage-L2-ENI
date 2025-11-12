@@ -1,0 +1,75 @@
+.vehicule-container {
+  padding: 2rem;
+  max-width: 1600px; /* conteneur large */
+  margin: auto;
+}
+
+/* Tableau DataTable */
+.rdt_TableWrapper {
+  overflow-x: auto; /* permet de scroller si l'écran est petit */
+}
+
+.rdt_Table {
+  width: 100%; /* occupe toute la largeur disponible */
+  table-layout: fixed; /* empêche le texte de bouger */
+}
+
+.rdt_TableCell, .rdt_TableHeadCell {
+  padding: 16px 24px; /* espace large entre les cellules */
+  white-space: nowrap; /* texte reste sur une ligne */
+  overflow: hidden;
+  text-overflow: ellipsis; /* coupe texte trop long */
+}
+
+.rdt_TableHead {
+  font-weight: bold;
+}
+
+/* Modal et formulaire */
+.modal-content {
+  width: 750px; /* large modal */
+  max-width: 95%;
+  padding: 2rem;
+}
+
+.vehicule-form input {
+  width: 100%;
+  padding: 0.8rem; /* champs larges */
+  font-size: 16px; /* texte inchangé */
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Boutons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-submit, .btn-cancel {
+  padding: 0.8rem 1.2rem;
+  font-size: 16px; /* texte inchangé */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #34495e;
+}
+
+.btn-cancel {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #c0392b;
+}

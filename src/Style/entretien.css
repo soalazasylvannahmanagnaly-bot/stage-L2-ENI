@@ -1,0 +1,113 @@
+/* ============================
+   Conteneur principal
+   ============================ */
+.entretien-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Fond clair simple */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   Titres
+   ============================ */
+.entretien-container h1,
+.entretien-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ============================
+   Formulaire vertical
+   ============================ */
+.vertical-form {
+  display: flex;
+  flex-direction: column; /* Champs empilés verticalement */
+  gap: 12px;
+}
+
+/* Labels des champs */
+.vertical-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Champs input / select */
+.vertical-form input,
+.vertical-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Bouton Enregistrer */
+.vertical-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4a90e2; /* Bleu doux */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  align-self: flex-start; /* bouton à gauche */
+}
+
+.vertical-form button:hover {
+  background-color: #357abd;
+}
+
+/* ============================
+   Table des entretiens
+   ============================ */
+.entretien-container table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.entretien-container table th,
+.entretien-container table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.entretien-container table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #333;
+}
+
+.entretien-container table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ============================
+   Responsive pour mobile
+   ============================ */
+@media (max-width: 600px) {
+  .vertical-form {
+    flex-direction: column;
+  }
+
+  .vertical-form button {
+    align-self: stretch; /* bouton prend toute la largeur */
+  }
+
+  .entretien-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .entretien-container table th,
+  .entretien-container table td {
+    padding: 8px 10px;
+  }
+}

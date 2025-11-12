@@ -1,0 +1,191 @@
+/* ===== Overlay du modal ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* fond semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===== Contenu du modal ===== */
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===== Header ===== */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827; /* gris foncé */
+}
+
+/* ===== Bouton fermer ===== */
+.close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6b7280; /* gris moyen */
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #111827; /* plus foncé au hover */
+}
+
+/* ===== Formulaire ===== */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-form label {
+  font-weight: 500;
+  color: #374151; /* gris foncé */
+}
+
+.modal-form input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db; /* gris clair */
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-form input:focus {
+  border-color: #2563eb; /* bleu */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== Actions ===== */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn {
+  background-color: #d1d5db; /* gris clair */
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #9ca3af;
+}
+
+.submit-btn {
+  background-color: #2563eb; /* bleu principal */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8; /* bleu foncé */
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ===== Tableau utilisateurs ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem; */
+  overflow: hidden;
+}
+
+thead {
+  background-color: #1f2937; /* gris foncé */
+  color: #fff;
+}
+
+thead th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb; /* gris clair */
+  transition: background 0.3s ease;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f3f4f6; /* survol gris clair */
+}
+
+tbody td {
+  padding: 0.75rem;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+/* Boutons spécifiques dans le tableau */
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button.bg-red-500 {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+button.bg-red-500:hover {
+  background-color: #dc2626;
+}

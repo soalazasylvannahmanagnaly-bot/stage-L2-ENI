@@ -1,0 +1,140 @@
+.menu-container {
+  display: flex;
+  position: relative;
+}
+
+/* --- Bouton Hamburger --- */
+.hamburger-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 30px;
+  z-index: 2000; /* ✅ reste toujours au-dessus */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-btn .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #007bff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.hamburger-btn.open .top {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.hamburger-btn.open .middle {
+  opacity: 0;
+}
+.hamburger-btn.open .bottom {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #1f2937;
+  color: #fff;
+  padding: 20px 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+/* ✅ Mode élargi */
+.sidebar.expanded {
+  width: 250px;
+}
+
+/* ✅ Mode réduit */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* --- Titre --- */
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+/* --- Liens --- */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.nav-links a:hover {
+  background: #374151;
+}
+
+.nav-links a.active {
+  background: #2563eb;
+}
+
+/* --- Footer --- */
+.sidebar-footer {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #374151;
+}
+
+/* --- Contenu principal --- */
+.main-content {
+  flex: 1;
+  transition: margin-left 0.4s ease;
+  padding: 60px;
+}
+
+.main-content.shifted {
+  margin-left: 250px;
+}
+
+.main-content.compact {
+  margin-left: 80px;
+}
