@@ -78,7 +78,7 @@ function Acceuil() {
       </div>
 
       <footer className="footer-section">
-         BIENVENUE 
+         vanah
       </footer>
     </div>
   );
